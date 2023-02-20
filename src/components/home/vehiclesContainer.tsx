@@ -14,7 +14,7 @@ const Vehicles:FC<Iprops> = ({data}) => {
 
    
     const deleteVehicle = (id:string) =>{
-        axios.delete('https://clupp-server.herokuapp.com/vehicle'+id).
+        axios.delete(`https://clupp-server.herokuapp.com/vehicle/${id}`).
         then(() => setVehicles(v => v.filter(i => i.id !== id))).
         catch(e => console.log(e));
     }
