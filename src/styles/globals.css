@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn-2{
+    @apply transition-all duration-300 rounded-2xl bg-gradient-to-r from-slate-50 to-slate-100 font-semibold px-4 py-3 shadow-md border-2 border-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500 hover:text-white hover:border-blue-200 w-full lg:w-fit ;
+}
+.logo{
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold
+}
+
+.car{
+    @apply bg-white py-[0.6rem] px-3 rounded-2xl shadow-md hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500  hover:text-white cursor-pointer
+}
+.add{
+    @apply bg-white py-3 px-3 rounded-2xl shadow-md hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500  hover:text-white cursor-pointer font-bold
+}
+.logout-btn{
+    @apply py-3 px-3 shadow-md bg-white rounded-2xl hover:bg-gradient-to-r hover:from-red-400 hover:to-red-500  hover:text-white cursor-pointer
+}
+.avatar-login{
+    @apply py-3 px-[0.40rem] shadow-md bg-white rounded-2xl hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500  hover:text-white cursor-pointer
+}
+
+.input-form-search{
+    @apply rounded-xl p-2 text-lg bg-gradient-to-r from-[#e9eef6] to-[#e4ebf4] focus:outline-blue-500 font-semibold placeholder:font-normal text-slate-500 focus:text-blue-600 transition-all duration-500 ;
+   }
+.input-form{
+ @apply rounded-xl p-3 text-lg bg-gradient-to-r from-[#e9eef6] to-[#e4ebf4] focus:outline-blue-500 font-semibold placeholder:font-normal text-blue-500 focus:text-blue-600 transition-all duration-500;
+}
+
+.featured-search-card{
+    @apply bg-gradient-to-r from-[#f2f6fd] to-[#edf1f7] border-[2px] border-white shadow-md p-4 rounded-xl flex flex-col gap-4 lg:flex-row justify-around items-center ;
+}
+.featured-form-card{
+    @apply bg-gradient-to-r from-[#f2f6fd] to-[#edf1f7] border-[2px] border-white shadow-md p-4 rounded-xl ;
+}
+
+.featured-car-card{
+    @apply bg-gradient-to-r from-[#f2f6fd] to-[#edf1f7] border-[2px] border-white shadow-md p-4 rounded-xl;
+}
+
+.featured-car-card > h3{
+    @apply text-2xl font-semibold my-2;
+}
+
+.btn{
+    @apply bg-blue-500 rounded-xl px-4 py-2 text-white  hover:bg-gradient-to-r from-blue-400 to-blue-500 ;   
+}
+
+body{
+    @apply bg-gradient-to-t from-[#f2f6fd] to-[#edf1f7] text-[#22262a];
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
