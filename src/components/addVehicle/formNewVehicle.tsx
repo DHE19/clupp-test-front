@@ -9,7 +9,7 @@ const FormNewVehicle = () => {
     
     const handleForm = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-            axios.post('https://clupp-server.herokuapp.com/vehicle',{year,model,brand}).
+            axios.post('https://clupp-server.herokuapp.com/vehicles',{year,model,brand}).
             then(_res => router.push('/'));
     }
 

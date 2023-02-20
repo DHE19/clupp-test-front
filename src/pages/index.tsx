@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const [data, setData] = useState<IVehicle []| null>(null);
   
   useEffect(() => {     
-    axios.get('https://clupp-server.herokuapp.com/vehicle')
+    axios.get('https://clupp-server.herokuapp.com/vehicles')
     .then(response => response.data)
     .then(data => setData(data))
     .catch(error => console.error(error));
