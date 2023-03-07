@@ -1,6 +1,5 @@
 import { auth } from "./firebaseConfig";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { log } from "console";
 
 
 

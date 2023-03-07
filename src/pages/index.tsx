@@ -5,13 +5,14 @@ import MetaHead from '../components/metaHead'
 import { useEffect, useState } from 'react'
 import SearchBar from '../components/home/searchBar'
 import axios from 'axios'
+import { API_URL_VEHICLES } from '../constants/constants'
 
 
 const Home: NextPage = () => {
   const [data, setData] = useState<IVehicle []| null>(null);
   
   useEffect(() => {     
-    axios.get('https://clupp-server.herokuapp.com/vehicles')
+    axios.get(API_URL_VEHICLES)
     .then(response => response.data)
     .then(data => setData(data))
     .catch(error => console.error(error));

@@ -4,7 +4,7 @@ import {AuthContext} from '../../context/authContext';
 import axios from 'axios';
 import { SearchContext } from "../../context/searchContext";
 import { initialState } from "../../context/searchContext";
-
+import {API_URL_VEHICLE} from '../../constants/constants';
 interface Iprops{data: IVehicle[];}
 const Vehicles:FC<Iprops> = ({data}) => {
     const [vehicles, setVehicles] = useState(data);
@@ -14,7 +14,7 @@ const Vehicles:FC<Iprops> = ({data}) => {
 
    
     const deleteVehicle = (id:string) =>{
-        axios.delete(`https://clupp-server.herokuapp.com/vehicle/${id}`).
+        axios.delete(API_URL_VEHICLE(id)).
         then(() => setVehicles(v => v.filter(i => i.id !== id))).
         catch(e => console.log(e));
     }

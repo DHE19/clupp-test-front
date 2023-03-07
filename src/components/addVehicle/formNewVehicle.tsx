@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react"
 import axios from 'axios';
 import { useRouter } from "next/router";
+import { API_URL_VEHICLES } from '../../constants/constants'
 const FormNewVehicle = () => {
     const [brand, setBrand] = useState('');
     const [year, setYear] = useState(2023);
@@ -9,7 +10,7 @@ const FormNewVehicle = () => {
     
     const handleForm = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-            axios.post('https://clupp-server.herokuapp.com/vehicles',{year,model,brand}).
+            axios.post(API_URL_VEHICLES,{year,model,brand}).
             then(_res => router.push('/'));
     }
 
